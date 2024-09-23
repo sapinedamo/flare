@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "b1176db8-96c7-4c84-82e3-5678edd11f03",
+		"name": "Flare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8633718"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/predict_price/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"levy\": 2450.0,\r\n    \"manufacturer\": \"Toyota\",\r\n    \"model\": \"Corolla\",\r\n    \"prod_year\": 2017,\r\n    \"category\": \"Sedan\",\r\n    \"leather_interior\": true,\r\n    \"fuel_type\": \"Petrol\",\r\n    \"engine_volume\": 1.8,\r\n    \"mileage\": 50000,\r\n    \"cylinders\": 4,\r\n    \"gear_box_type\": \"Automatic\",\r\n    \"drive_wheels\": \"Front\",\r\n    \"doors\": 4,\r\n    \"wheel\": \"Left\",\r\n    \"color\": \"White\",\r\n    \"airbags\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/predict_price/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"predict_price",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/evaluate_price/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"specifications\": {\r\n        \"levy\": 0.0,\r\n        \"manufacturer\": \"Toyota\",\r\n        \"model\": \"Corolla\",\r\n        \"prod_year\": 2015,\r\n        \"category\": \"Sedan\",\r\n        \"leather_interior\": true,\r\n        \"fuel_type\": \"Petrol\",\r\n        \"engine_volume\": 1.8,\r\n        \"mileage\": 50000,\r\n        \"cylinders\": 4,\r\n        \"gear_box_type\": \"Automatic\",\r\n        \"drive_wheels\": \"Front\",\r\n        \"doors\": 4,\r\n        \"wheel\": \"Left\",\r\n        \"color\": \"White\",\r\n        \"airbags\": 6\r\n    },\r\n    \"proposed_price\": 100000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/evaluate_price/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"evaluate_price",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/recommend_car/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/recommend_car/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recommend_car",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
